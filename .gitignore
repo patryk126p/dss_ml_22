@@ -3,3 +3,4 @@ mlruns/
 .idea/
 wandb/
 artifacts/
+__pycache__

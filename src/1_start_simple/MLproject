@@ -1,0 +1,19 @@
+name: 1_start_simple
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      batch_size:
+        description: Batch size for DataLoader
+        type: float
+        default: 64
+      model_config:
+        description: Path to json with model configuration
+        type: string
+        default: model_config.json
+      model_name:
+        description: Name of model artifact
+        type: string
+        default: dl.model
+    command: "python main.py {batch_size} {model_config} {model_name}"
