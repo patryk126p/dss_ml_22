@@ -1,0 +1,4 @@
+# Ignore everything in this directory
+dl.model
+# Except this file
+!.gitignore
