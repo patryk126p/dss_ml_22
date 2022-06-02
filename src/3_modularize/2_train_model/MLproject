@@ -1,0 +1,19 @@
+name: train_model
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      train_data:
+        description: Train dataset artifact
+        type: string
+        default: "mnist.pickle:latest"
+      model_config:
+        description: Path to json with model configuration
+        type: string
+        default: "model_config.json"
+      model_name:
+        description: Name of model artifact
+        type: string
+        default: "dl.model"
+    command: "python run.py {train_data} {model_config} {model_name}"

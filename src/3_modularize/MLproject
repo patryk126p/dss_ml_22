@@ -1,0 +1,19 @@
+name: 3_modularize
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      steps:
+        description: Comma separated names of steps to run or all
+        type: string
+        default: all
+      project_name:
+        description: W&B project name
+        type: string
+        default: mnist
+      group_name:
+        description: W&B group name
+        type: string
+        default: development
+    command: "python main.py {steps} {project_name} {group_name}"

@@ -1,0 +1,8 @@
+name: modularize
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - mlflow=1.26.1
+  - python=3.9.13
+  - pyyaml=6.0

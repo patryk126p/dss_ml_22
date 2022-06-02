@@ -1,0 +1,10 @@
+download:
+  dataset: "MNIST"
+  batch_size: 64
+  artifact_name: "mnist.pickle"
+  artifact_type: "dataset"
+  artifact_description: "pickled dataset"
+train:
+  train_data: "mnist.pickle:latest"
+  model_config: "model_config.json"
+  model_name: "dl.model"

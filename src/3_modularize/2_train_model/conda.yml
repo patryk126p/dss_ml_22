@@ -1,0 +1,13 @@
+name: train_model
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+dependencies:
+  - mlflow=1.26.1
+  - pip=22.1.2
+  - python=3.9.13
+  - pytorch=1.6.0
+  - torchvision=0.10.1
+  - pip:
+      - wandb==0.12.17

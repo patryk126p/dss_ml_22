@@ -1,0 +1,27 @@
+name: get_data
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      dataset:
+        description: Name of torchvision class for downloading dataset
+        type: string
+        default: MNIST
+      batch_size:
+        description: Batch size for DataLoader
+        type: float
+        default: 64
+      artifact_name:
+        description: Dataset name
+        type: string
+        default: "mnist.pickle"
+      artifact_type:
+        description: Dataset type
+        type: string
+        default: dataset
+      artifact_description:
+        description: Dataset description
+        type: string
+        default: "pickled dataset"
+    command: "python run.py {dataset} {batch_size} {artifact_name} {artifact_type} {artifact_description}"
