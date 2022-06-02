@@ -1,0 +1,9 @@
+name: experiments
+
+entry_points:
+  run_1:
+    command: "mlflow run src/1_start_simple"
+  run_2:
+    command: "mlflow run src/2_add_tracking"
+  run_3:
+    command: "mlflow run src/3_modularize"
