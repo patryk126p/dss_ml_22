@@ -18,9 +18,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
 
 
-def run_experiment(args: argparse.Namespace):
-    os.environ["WANDB_PROJECT"] = args.project_name
-    os.environ["WANDB_RUN_GROUP"] = args.group_name
+def run_experiment(args: argparse.Namespace) -> None:
 
     run = wandb.init(job_type="simple_experiment", save_code=True)
     run.config.update(args)
