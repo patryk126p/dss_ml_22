@@ -3,11 +3,13 @@ import json
 import logging
 import os
 import pickle
+from typing import Optional
 
 import torch
 import wandb
 from torch import nn, optim
 from torch.nn.modules.loss import _Loss
+from torch.utils.data import DataLoader
 from utils.model import ConvNet
 from wandb.sdk.wandb_run import Run
 
@@ -40,7 +42,7 @@ def go(args: argparse.Namespace) -> None:
     logger.info("Training model")
     training_loop(n_epochs, optimizer, model, criterion, train_loader, run)
 
-    model_path = os.path.join("../model", args.model_name)
+    model_path = os.path.join("model", args.model_name)
     logger.info(f"Saving model to {model_path}")
     torch.save(model.state_dict(), model_path)
     logger.info(f"Uploading {args.model_name} to artifact store")
