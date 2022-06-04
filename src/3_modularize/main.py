@@ -9,6 +9,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "steps", type=str, help="Comma separated names of steps to run or all"
     )
+    parser.add_argument(
+        "config", type=str, help="Path to config file with settings for steps"
+    )
     parser.add_argument("project_name", type=str, help="W&B project name")
     parser.add_argument("group_name", type=str, help="W&B group name")
     args = parser.parse_args()
@@ -16,7 +19,7 @@ if __name__ == "__main__":
     os.environ["WANDB_PROJECT"] = args.project_name
     os.environ["WANDB_RUN_GROUP"] = args.group_name
 
-    with open("config.yaml", "r") as fh:
+    with open(args.config, "r") as fh:
         conf = yaml.safe_load(fh)
 
     run_experiment(conf, args.steps)

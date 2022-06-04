@@ -8,6 +8,10 @@ entry_points:
         description: Comma separated names of steps to run or all
         type: string
         default: all
+      config:
+        description: Path to config file with settings for steps
+        type: string
+        default: "config.yaml"
       project_name:
         description: W&B project name
         type: string
