@@ -7,6 +7,7 @@
 1. Create account at [Weights & Biases](https://wandb.ai/site)
 2. Install requirements `pip install -r requirements.txt`
 3. Login to Weights & Biases from terminal `wandb login`
+4. To use pre-commit hooks execute: `pre-commit install`
 
 ### How to use this repo
 
