@@ -29,8 +29,8 @@ def go(args: argparse.Namespace) -> None:
     logger.info(f"Uploading {args.artifact_name} to artifact store")
     save_artifact(
         args.artifact_name,
-        args.artifact_type,
-        args.artifact_description,
+        "dataset",
+        "pickled dataset",
         file_path,
         run,
     )

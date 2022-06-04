@@ -20,4 +20,4 @@ entry_points:
         description: W&B group name
         type: string
         default: development
-    command: "python main.py {steps} {project_name} {group_name}"
+    command: "python main.py {steps} {config} {project_name} {group_name}"

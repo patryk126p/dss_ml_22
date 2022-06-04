@@ -19,8 +19,6 @@ def run_experiment(config: dict, steps: str) -> None:
                 "dataset": config["download"]["dataset"],
                 "batch_size": config["download"]["batch_size"],
                 "artifact_name": config["download"]["artifact_name"],
-                "artifact_type": config["download"]["artifact_type"],
-                "artifact_description": config["download"]["artifact_description"],
             },
         )
 

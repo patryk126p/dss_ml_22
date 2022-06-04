@@ -16,12 +16,4 @@ entry_points:
         description: Dataset name
         type: string
         default: "mnist.pickle"
-      artifact_type:
-        description: Dataset type
-        type: string
-        default: dataset
-      artifact_description:
-        description: Dataset description
-        type: string
-        default: "pickled dataset"
-    command: "python run.py {dataset} {batch_size} {artifact_name} {artifact_type} {artifact_description}"
+    command: "python run.py {dataset} {batch_size} {artifact_name}"
